@@ -15,7 +15,20 @@ def necklace(a,b):
   return
   str necklace number
   """
-  return None
+  list1 = []
+  list1.append(a)
+  list1.append(b)
+  for i in range(100):
+    x = list1[i] + list1[i+1]
+    if x > 9:
+      y = x - 9
+      list1.append(y)
+    elif x < 9:
+      list1.append(x)
+    if len(list1) > 20:
+      break
+  return list1
+
 
 def main():
   assert necklace(9,4) == "94483257314595516742685494"
@@ -24,6 +37,5 @@ def main():
   assert necklace(3,4) == "34729224617865279775382134"
 
 if __name__ == "__main__":
-  main()
-  
+ print(necklace(9,4))
   
