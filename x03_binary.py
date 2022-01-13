@@ -6,13 +6,16 @@ converts it into a list.  Each element is equal to the power
 of 2 that corresponds to that place value
 """
 
-def toBinary(value):
-  '''
-  input: value (int)
-  return : list of values
-  '''
-  
-  return None
+def toBinary(num):
+  x = format(num,'b')
+  x = list(x)
+  for i in range(10):
+    if len(x) != 8:
+      x.append('0')
+  for i in range( len(x)):
+    x[i] = int(x[i])
+  return x
+
 
 def toDecimal(myList):
   '''
@@ -20,6 +23,7 @@ def toDecimal(myList):
   return int
   convert binary to decimal
   '''
+  
   return None
 
 def problem1():
@@ -41,5 +45,3 @@ def problem2():
   assert toDecimal([1,0,1,1,0,1,0,0]) == 45
   
 if __name__ == "__main__":
-  problem1()
-  problem2()
