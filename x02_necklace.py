@@ -42,5 +42,5 @@ def main():
   assert necklace(3,4) == "34729224617865279775382134"
 
 if __name__ == "__main__":
-  main()
+  print(necklace(0,0))
   
